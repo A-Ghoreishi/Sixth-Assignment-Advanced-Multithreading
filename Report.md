@@ -30,30 +30,26 @@ Since learning semaphore was our assignment, I did some research and explored th
 Through this week, I searched for many allgorithms and read articles about them throughout the history; from the very first algorithm to the newest one. some were efficient, some weren't.Unfortunately, the possibility to discuss all of them doesn't exist. So,in here, we mention and talk about some of them
 
 #### Leibniz algorithm
-![Leibniz-formula](https://i.sstatic.net/a2DHV.png)
-
 In mathematics, the Leibniz formula for π, named after Gottfried Wilhelm Leibniz, states that:
 
-\[ \frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1}, \]
+![Leibniz-formula](https://i.sstatic.net/a2DHV.png)
 
 which is an alternating series.
 
 It is sometimes called the Madhava–Leibniz series as it was first discovered by the Indian mathematician Madhava of Sangamagrama or his followers in the 14th–15th century, and was later independently rediscovered by James Gregory in 1671 and Leibniz in 1673. The Taylor series for the inverse tangent function, often called Gregory's series, is:
 
-\[ \arctan x = x - \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + \cdots = \sum_{k=0}^{\infty} \frac{(-1)^k x^{2k+1}}{2k+1}. \]
+![Leibniz-series](image-2.png)
 
-The Leibniz formula is the special case for \( \arctan 1 = \frac{1}{4}\pi \).
+The Leibniz formula is the special case for arctan 1 = π/4
 
-It also is the Dirichlet L-series of the non-principal Dirichlet character of modulus 4 evaluated at \( s = 1 \), and therefore the value \( \beta(1) \) of the Dirichlet beta function.
+It also is the Dirichlet L-series of the non-principal Dirichlet character of modulus 4 evaluated at ( s = 1 ), and therefore the value (β(1)) of the Dirichlet beta function.
 
 ### Advantages and Disadvantages of the Leibniz Formula for Calculating π
 
 #### Leibniz Formula
 The Leibniz formula for calculating π is given by:
 
-\[ \frac{\pi}{4} = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \frac{1}{9} - \cdots \]
-or more generally:
-\[ \frac{\pi}{4} = \sum_{k=0}^{\infty} \frac{(-1)^k}{2k+1} \]
+π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9 - ...
 
 This formula is an alternating series.
 
@@ -162,233 +158,27 @@ The Chudnovsky algorithm is a fast method for calculating the digits of π, base
 
 It was used in the world record calculations of 2.7 trillion digits of π in December 2009,[3] 10 trillion digits in October 2011,[4][5] 22.4 trillion digits in November 2016,[6] 31.4 trillion digits in September 2018–January 2019,[7] 50 trillion digits on January 29, 2020,[8] 62.8 trillion digits on August 14, 2021,[9] 100 trillion digits on March 21, 2022,[10] and 105 trillion digits on March 14, 2024.[11]
 
-**The algorithm is based on the negated Heegner number**
-
-**𝑑
-=
-−
-163
-d=−163, the j-function:
-
-𝑗
-(
-1
-+
-𝑖
-163
-2
-)
-=
-−
-64032
-0
-3
-,
-j( 
-2
-1+i 
-163
-​
- 
-​
- )=−640320 
-3
- ,
-
-and on the following rapidly convergent generalized hypergeometric series:
-
-1
-𝜋
-=
-12
-∑
-𝑘
-=
-0
-∞
-(
-−
-1
-)
-𝑘
-(
-6
-𝑘
-)
-!
-(
-545140134
-𝑘
-+
-13591409
-)
-(
-3
-𝑘
-)
-!
-(
-𝑘
-!
-)
-3
-(
-640320
-)
-3
-𝑘
-+
-3
-2
-π
-1
-​
- =12∑ 
-k=0
-∞
-​
-  
-(3k)!(k!) 
-3
- (640320) 
-3k+ 
-2
-3
-​
- 
- 
-(−1) 
-k
- (6k)!(545140134k+13591409)
-​**
- 
+The algorithm is based on the negated Heegner number d = 163,the j function ![jFunction](image-3.png)and on the following rapidly convergent generalized hypergeometric series:
 
 A detailed proof of this formula can be found here.
 
 This identity is similar to some of Ramanujan's formulas involving π and is an example of a Ramanujan–Sato series.
+Time Complexity of the algorithm is ![Complexity](image-4.png)
 
-Time Complexity
-The time complexity of the algorithm is 
-𝑂
-(
-𝑛
-(
-log
-⁡
-𝑛
-)
-3
-)
-O(n(logn) 
-3
- ).
 
 This makes the Chudnovsky algorithm highly efficient for calculating large numbers of digits of π, contributing to its use in setting multiple world records for π computation.
 
 #### Bailey–Borwein–Plouffe formula
 ![Bailey–Borwein–Plouffe-algorithm](image.png)
 
-The Bailey–Borwein–Plouffe formula (BBP formula) is a formula for π. It was discovered in 1995 by Simon Plouffe and is named after the authors of the article in which it was published, David H. Bailey, Peter Borwein, and Plouffe.[1] Before that, it had been published by Plouffe on his own site.[2] The formula is:
-
-𝜋
-=
-∑
-𝑘
-=
-0
-∞
-[
-1
-16
-𝑘
-(
-4
-8
-𝑘
-+
-1
-−
-2
-8
-𝑘
-+
-4
-−
-1
-8
-𝑘
-+
-5
-−
-1
-8
-𝑘
-+
-6
-)
-]
-{\displaystyle \pi =\sum _{k=0}^{\infty }\left[{\frac {1}{16^{k}}}\left({\frac {4}{8k+1}}-{\frac {2}{8k+4}}-{\frac {1}{8k+5}}-{\frac {1}{8k+6}}\right)\right]}
-The BBP formula gives rise to a spigot algorithm for computing the nth base-16 (hexadecimal) digit of π (and therefore also the 4nth binary digit of π) without computing the preceding digits. This does not compute the nth decimal digit of π (i.e., in base 10).[3] But another formula discovered by Plouffe in 2022 allows extracting the nth digit of π in decimal.[4] BBP and BBP-inspired algorithms have been used in projects such as PiHex[5] for calculating many digits of π using distributed computing. The existence of this formula came as a surprise. It had been widely believed that computing the nth digit of π is just as hard as computing the first n digits.[1]
-
-Since its discovery, formulas of the general form:
-
-𝛼
-=
-∑
-𝑘
-=
-0
-∞
-[
-1
-𝑏
-𝑘
-𝑝
-(
-𝑘
-)
-𝑞
-(
-𝑘
-)
-]
-{\displaystyle \alpha =\sum _{k=0}^{\infty }\left[{\frac {1}{b^{k}}}{\frac {p(k)}{q(k)}}\right]}
-have been discovered for many other irrational numbers 
-𝛼{\displaystyle \alpha }, where 
-𝑝
-(
-𝑘
-)
-{\displaystyle p(k)} and 
-𝑞
-(
-𝑘
-)
-{\displaystyle q(k)} are polynomials with integer coefficients and 
-𝑏
-≥
-2
-{\displaystyle b\geq 2} is an integer base. Formulas of this form are known as BBP-type formulas.[6] Given a number 
-𝛼{\displaystyle \alpha }, there is no known systematic algorithm for finding appropriate 
-𝑝
-(
-𝑘
-)
-{\displaystyle p(k)}, 
-𝑞
-(
-𝑘
-)
-{\displaystyle q(k)}, and 
-𝑏
-{\displaystyle b}; such formulas are discovered experimentally.
+The Bailey–Borwein–Plouffe formula (BBP formula) is a formula for π. It was discovered in 1995 by Simon Plouffe and is named after the authors of the article in which it was published, David H. Bailey, Peter Borwein, and Plouffe.[1] Before that, it had been published by Plouffe on his own site.[2] The formula is mentioned above
 
 ### Advantages and Disadvantages of the BBP Formula for Calculating π
 
 #### BBP Formula
 The BBP (Bailey–Borwein–Plouffe) formula for π is given by:
 
-\[ \pi = \sum_{k=0}^{\infty} \frac{1}{16^k} \left( \frac{4}{8k+1} - \frac{2}{8k+4} - \frac{1}{8k+5} - \frac{1}{8k+6} \right) \]
+![Bailey–Borwein–Plouffe-algorithm](image.png)
 
 This formula allows for the direct computation of binary or hexadecimal digits of π without needing to calculate the preceding digits, a property known as "digit extraction."
 
