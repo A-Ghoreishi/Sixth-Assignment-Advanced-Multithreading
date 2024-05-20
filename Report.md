@@ -158,12 +158,12 @@ The Chudnovsky algorithm is a fast method for calculating the digits of π, base
 
 It was used in the world record calculations of 2.7 trillion digits of π in December 2009,[3] 10 trillion digits in October 2011,[4][5] 22.4 trillion digits in November 2016,[6] 31.4 trillion digits in September 2018–January 2019,[7] 50 trillion digits on January 29, 2020,[8] 62.8 trillion digits on August 14, 2021,[9] 100 trillion digits on March 21, 2022,[10] and 105 trillion digits on March 14, 2024.[11]
 
-The algorithm is based on the negated Heegner number d = 163,the j function ![jFunction](image-3.png)and on the following rapidly convergent generalized hypergeometric series:
+The algorithm is based on the negated Heegner number d = 163,the j function ![jFunction](Untitled-1.png)and on the following rapidly convergent generalized hypergeometric series:
 
 A detailed proof of this formula can be found here.
 
 This identity is similar to some of Ramanujan's formulas involving π and is an example of a Ramanujan–Sato series.
-Time Complexity of the algorithm is ![Complexity](image-4.png)
+Time Complexity of the algorithm is ![Complexity](image-4-1.png)
 
 
 This makes the Chudnovsky algorithm highly efficient for calculating large numbers of digits of π, contributing to its use in setting multiple world records for π computation.
